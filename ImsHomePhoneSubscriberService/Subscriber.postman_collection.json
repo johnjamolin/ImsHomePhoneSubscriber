@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "05d5a947-f7c7-46c9-baf2-c4a796f97d08",
+		"name": "Subscriber",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15908352"
+	},
+	"item": [
+		{
+			"name": "Save Subscriber",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n  \"phoneNumber\": \"18675181010\",\r\n\r\n  \"userName\": \"16045906403\",\r\n\r\n  \"password\": \"p@ssw0rd!\",\r\n\r\n  \"domain\": \"ims.mnc660.mcc302.3gppnetwork.org\",\r\n\r\n  \"status\": \"ACTIVE\",\r\n\r\n  \"features\": {\r\n\r\n    \"callForwardNoReply\": {\r\n\r\n      \"provisioned\": true,\r\n\r\n      \"destination\": \"tel:+18675182800\"\r\n\r\n    }\r\n\r\n  }\r\n\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ims/subscriber",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ims",
+						"subscriber"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve All Subscribers",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Subscriber",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Update Existing Subscriber",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n  \"phoneNumber\": \"18675181010\",\r\n\r\n  \"userName\": \"16045906403\",\r\n\r\n  \"password\": \"p@ssw0rd!\",\r\n\r\n  \"domain\": \"ims.mnc660.mcc302.4gppnetwork.org\",\r\n\r\n  \"status\": \"ACTIVE\",\r\n\r\n  \"features\": {\r\n\r\n    \"callForwardNoReply\": {\r\n\r\n      \"provisioned\": true,\r\n\r\n      \"destination\": \"tel:+18675182800\"\r\n\r\n    }\r\n\r\n  }\r\n\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ims/subscriber/phoneNumber?phoneNumber=18675181010",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ims",
+						"subscriber",
+						"phoneNumber"
+					],
+					"query": [
+						{
+							"key": "phoneNumber",
+							"value": "18675181010"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
